@@ -1,0 +1,30 @@
+﻿@model ViewComponents.ProductListViewModel
+
+<h2 class="text-center text-danger">Product List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ProductId</td>
+            <td>ProductName</td>
+            <td>CategoryId</td>
+            <td>QuantityPerUnit</td>
+            <td>UnitPrice</td>
+            <td>UnitsInStock</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+        <tr>
+            <td>@item.ProductId</td>
+            <td>@item.ProductName</td>
+            <td>@item.CategoryId</td>
+            <td>@item.QuantityPerUnit</td>
+            <td>@item.UnitPrice</td>
+            <td>@item.UnitsInStock</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
